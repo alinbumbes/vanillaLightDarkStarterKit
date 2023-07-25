@@ -1,21 +1,13 @@
-git addro22 project to learn GIT
-
-## Getting started
-
-add in .gitconfig these commands adjusting for your own user name 
+## Description
+simple app layout that has light / dark theme switcher, that has no css/js dependencies.
 
 
-[core]
-	editor = \"C:\\Users\\wrkr\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
-[user]
-	email = alinbumbes@gmail.com
-	name = Alin
-[alias]
-    co = checkout
-    st = status
-    br = branch
-    lga = log --graph --oneline --decorate
+## Installation
+```bash
 
+npm install
+
+``` 
 
 
 #### comenzi de git utile :

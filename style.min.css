@@ -1,3 +1,4 @@
+/* basic root vars reset and layout */
 :root {
   --color-primary: #007bff;
   --color-secondary: #6c757d;
@@ -27,21 +28,20 @@ body {
     color: #fff;
   }
 }
-.h1 {
-  font-size: 3rem;
-  margin: 0;
-  padding: 0;
-  border:1px solid red;
+/* components */
+.top-menu {
+    display: flex;
+    background-color: var(--bg-footer);
+    align-items: center;
+    padding: 0 0.5rem;
+    color: #fff;
 }
-.myClass {
-  color: red;
-  & .innerClass {
-      color: blue;
-      &:hover {
-          color: green;
-      }
-  }
-}
+.top-nav > li > a {
+        text-decoration: none;
+        padding: 0.5rem;
+        
+    }
+/* utilities */
 .txt-primary {
   color: var(--color-primary);
 }
@@ -50,4 +50,18 @@ body {
 }
 .fs-lg {
   font-size: 1.5rem;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.w-100 {
+  width: 100%;
+}
+.ul-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

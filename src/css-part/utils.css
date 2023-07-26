@@ -1,0 +1,10 @@
+.txt-primary {
+  color: var(--color-primary);
+}
+.txt-secondary {
+  color: var(--color-secondary);
+}
+
+.fs-lg {
+  font-size: 1.5rem;
+}

@@ -16,19 +16,12 @@ body {
 }
 
 .ab-layout > footer {
-background-color: var(--bg-footer);
-padding: 2rem 0.5rem;
-color:#fff;
+  background-color: var(--bg-footer);
+  padding: 2rem 0.5rem;
+  color: #fff;
 }
 .h1 {
   font-size: 3rem;
   margin: 0;
   padding: 0;
-}
-
-.txt-primary {
-  color: var(--color-primary);
-}
-.txt-secondary {
-  color: var(--color-secondary);
 }

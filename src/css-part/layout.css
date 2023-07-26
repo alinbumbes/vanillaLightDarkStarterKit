@@ -9,19 +9,22 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
   height: 100vh;
+  
+  & main {
+    background-color: var(--bg-main);
+  }
+  
+  & footer {
+    background-color: var(--bg-footer);
+    padding: 2rem 0.5rem;
+    color: #fff;
+  }
 }
 
-.ab-layout > main {
-  background-color: var(--bg-main);
-}
-
-.ab-layout > footer {
-  background-color: var(--bg-footer);
-  padding: 2rem 0.5rem;
-  color: #fff;
-}
 .h1 {
   font-size: 3rem;
   margin: 0;
   padding: 0;
+  border:1px solid red;
 }
+

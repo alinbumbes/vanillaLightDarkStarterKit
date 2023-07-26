@@ -5,8 +5,8 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "postcss style.css -o style.min.css",
-    "watch:css": "postcss style.css -o style.min.css -w"
+    "build:css": "postcss src/style.css -o style.min.css",
+    "watch:css": "postcss src/style.css -o style.min.css -w"
   },
   "repository": {
     "type": "git",

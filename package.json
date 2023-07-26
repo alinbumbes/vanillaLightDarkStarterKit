@@ -1,0 +1,28 @@
+{
+  "name": "vanillalightdarkstarterkit",
+  "version": "1.0.0",
+  "description": "simple app layout that has light / dark theme switcher, that has no css/js dependencies.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss style.css -o style.min.css",
+    "watch:css": "postcss style.css -o style.min.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinbumbes/vanillaLightDarkStarterKit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alinbumbes/vanillaLightDarkStarterKit/issues"
+  },
+  "homepage": "https://github.com/alinbumbes/vanillaLightDarkStarterKit#readme",
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0"
+  }
+}

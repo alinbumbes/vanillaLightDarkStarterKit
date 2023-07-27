@@ -26,12 +26,29 @@
         <h1 class="h1 txt-primary">Hello and welcome</h1>
         <p class="fs-lg">In this project I aim to achieve a simple css only solution for dark/light theme switcher. </p>
 
-        <ul>
-            <li>implement basic header menu nav</li>
-            <li>light/dark switch top-right</li>
-            <li>netlify implementation with github</li>
-        </ul>
+        <div class="card">
+            <h2 class="count-header">implement basic header menu nav</h2>
+            <p>create navbar at top, make it look nice regardless of light/dark theme. add links to the top, to be
+                continued...</p>
+        </div>
 
+        <div class="card">
+            <h2>create light/dark theme switcher with local storage recall of preferrences and prefers system theme</h2>
+            <p>light/dark theme: explore more options, either by injecting a list of variables from a dark-theme.json
+                file to load in the head > style tag, or just have it all in the main css file and just change the value
+                of the css-variables based on that state.
+                also save that value to localStorage, recall it on page load, and check if the system prefers dark
+                theme, if so, set the theme to dark.
+                to be continued...</p>
+        </div>
+
+
+        <div class="card">
+            <h2>move entire project to the slowbose project, so it deploys with netlify on slowbose.netlify.app</h2>
+            <p>also while you're there, create a contact form, add the fucking https://docs.netlify.com/forms/setup/
+                option in netlify so that form autodetection and submission happens automatically, yeah, test that shit
+                out</p>
+        </div>
     </main>
     <footer>footer data</footer>
 </body>

@@ -3,9 +3,10 @@
   --color-primary: #007bff;
   --color-secondary: #6c757d;
   --color-success: #28a745;
-  --dark-or-light: 100%;
-  --bg-main: hsl(0deg 0% var(--dark-or-light) / 66%);
-  --bg-footer: #db8989;
+  --dark-or-light: 0;
+    --bg-main: hsl(0deg 0% 0% / 50%);
+    --bg-header: hsl(0deg 0% 0% / 34%);
+    --bg-footer: hsl(0deg 0% 0% / 34%);
   --svg-gradient-base: 278deg;
   --svg-cl01: oklch((var(--svg-gradient-base)), 100%, 66%);
   --svg-cl02: oklch(calc((var(--svg-gradient-base) + 20)), 100%, 66%);
@@ -17,6 +18,8 @@
   --svg-cl08: oklch((var(--svg-gradient-base) + 140), 100%, 66%);
   --svg-cl09: oklch((var(--svg-gradient-base) + 160), 100%, 66%);
   --svg-cl10: oklch((var(--svg-gradient-base) + 180), 100%, 66%);
+  --clr-01: #d439f5;
+    --clr-02: #f5c048;
 }
 .svg-set-fills {
   margin: unset;
@@ -36,14 +39,8 @@ body {
   height: 100vh;
 
   & main {
-    /* background-color: var(--bg-main); */
+     background-color: var(--bg-main); 
     margin:0;
-  }
-
-  & footer {
-    /* background-color: var(--bg-footer); */
-    padding: 2rem 0.5rem;
-    color: #fff;
   }
 }
 .svg-bg-container {
@@ -95,18 +92,45 @@ body {
   fill: hsl(calc(var(--svg-gradient-base) + 50deg), 100%, 66%);
 }
 /* components */
-.top-menu {
+header.top {
     display: flex;
     background-color: var(--bg-footer);
     align-items: center;
-    padding: 0 0.5rem;
+    padding: 0 .5rem;
     color: #fff;
 }
-.top-nav > li > a {
-        text-decoration: none;
-        padding: 0.5rem;
-        
+.top-nav>li>a {
+    text-decoration: none;
+    padding: 1.5rem;
+    
     }
+.logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: system-ui;
+    
+        .sub-title {
+            font-size: 0.75rem;
+            font-weight: normal;
+        }
+    }
+.logo-svg_fill1 {
+        fill: var(--clr-01);
+    }
+.logo-svg_fill2 {
+        fill: var(--clr-02);
+    }
+.logo-svg_stroke1 {
+        stroke: var(--clr-01);
+    }
+.logo-svg_stroke2 {
+    stroke: var(--clr-02);
+}
+footer.bottom {
+    background-color: var(--bg-footer);
+    padding: 2rem 0.5rem;
+    color: #fff;
+  }
 .card {
     margin: 10px;
     padding: 10px;
@@ -125,11 +149,35 @@ body {
 .fs-lg {
   font-size: 1.5rem;
 }
+.no-wrap {
+  white-space: nowrap;
+}
+.flex-col {
+  flex-direction: column;
+}
 .d-flex {
   display: flex;
 }
 .justify-content-end {
   justify-content: flex-end;
+}
+.flex-space-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.g-1 {
+  gap: 0.25rem;
+}
+.g-2 {
+  gap: 0.5rem;
+}
+.g-3 {
+  gap: 0.75rem;
+}
+.g-4 {
+  gap: 1rem;
 }
 .w-100 {
   width: 100%;

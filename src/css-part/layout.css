@@ -15,14 +15,8 @@ body {
   height: 100vh;
 
   & main {
-    /* background-color: var(--bg-main); */
+     background-color: var(--bg-main); 
     margin:0;
-  }
-
-  & footer {
-    /* background-color: var(--bg-footer); */
-    padding: 2rem 0.5rem;
-    color: #fff;
   }
 }
 

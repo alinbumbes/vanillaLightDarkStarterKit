@@ -3,30 +3,96 @@
   --color-primary: #007bff;
   --color-secondary: #6c757d;
   --color-success: #28a745;
-
-  --bg-main: #e2e6e9;
+  --dark-or-light: 100%;
+  --bg-main: hsl(0deg 0% var(--dark-or-light) / 66%);
   --bg-footer: #db8989;
+  --svg-gradient-base: 278deg;
+  --svg-cl01: oklch((var(--svg-gradient-base)), 100%, 66%);
+  --svg-cl02: oklch(calc((var(--svg-gradient-base) + 20)), 100%, 66%);
+  --svg-cl03: oklch((var(--svg-gradient-base) + 40), 100%, 66%);
+  --svg-cl04: oklch((var(--svg-gradient-base) + 60), 100%, 66%);
+  --svg-cl05: oklch((var(--svg-gradient-base) + 80), 100%, 66%);
+  --svg-cl06: oklch((var(--svg-gradient-base) + 100), 100%, 66%);
+  --svg-cl07: oklch((var(--svg-gradient-base) + 120), 100%, 66%);
+  --svg-cl08: oklch((var(--svg-gradient-base) + 140), 100%, 66%);
+  --svg-cl09: oklch((var(--svg-gradient-base) + 160), 100%, 66%);
+  --svg-cl10: oklch((var(--svg-gradient-base) + 180), 100%, 66%);
 }
-html,
-body {
+.svg-set-fills {
+  margin: unset;
+}
+html {
   margin: 0;
   display: flow-root;
+  color: hsl(var(--dark-or-light), 0%, 100%);
+}
+body {
+  margin: 0;  
 }
 .ab-layout {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
   height: 100vh;
-  
+
   & main {
-    background-color: var(--bg-main);
+    /* background-color: var(--bg-main); */
+    margin:0;
   }
-  
+
   & footer {
-    background-color: var(--bg-footer);
+    /* background-color: var(--bg-footer); */
     padding: 2rem 0.5rem;
     color: #fff;
   }
+}
+.svg-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+
+
+
+}
+.svg-set-fills {
+  display: block;
+  margin: 0 auto;
+  width: var(--width-or-height-largest);
+  height: calc(var(--width-or-height-largest) / 2);
+}
+.svg-set-fills path:nth-child(1) {
+  fill: hsl(calc(var(--svg-gradient-base) - 40deg), 100%, 66%);
+}
+.svg-set-fills path:nth-child(2) {
+  fill: hsl(calc(var(--svg-gradient-base) - 30deg), 100%, 66%);
+}
+.svg-set-fills path:nth-child(3) {
+  fill: hsl(calc(var(--svg-gradient-base) - 20deg), 100%, 66%);
+}
+.svg-set-fills path:nth-child(4) {
+  fill: hsl(calc(var(--svg-gradient-base) - 10deg), 100%, 66%);
+}
+.svg-set-fills path:nth-child(5) {
+  fill: hsl(var(--svg-gradient-base), 100%, 66%);
+}
+.svg-set-fills path:nth-child(6) {
+  fill: hsl(calc(var(--svg-gradient-base) + 10deg), 100%, 66%);
+}
+.svg-set-fills path:nth-child(7) {
+  fill: hsl(calc(var(--svg-gradient-base) + 20deg), 100%, 66%);
+}
+.svg-set-fills path:nth-child(8) {
+  fill: hsl(calc(var(--svg-gradient-base) + 30deg), 100%, 66%);
+}
+.svg-set-fills path:nth-child(9) {
+  fill: hsl(calc(var(--svg-gradient-base) + 40deg), 100%, 66%);
+}
+.svg-set-fills path:nth-child(10) {
+  fill: hsl(calc(var(--svg-gradient-base) + 50deg), 100%, 66%);
 }
 /* components */
 .top-menu {
@@ -41,6 +107,14 @@ body {
         padding: 0.5rem;
         
     }
+.card {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #00000059;
+    background-color: hsl(0deg 0% 0% / 16%);
+    backdrop-filter: blur(15px);
+}
 /* utilities */
 .txt-primary {
   color: var(--color-primary);
@@ -64,4 +138,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.backdrop-blur {
+  backdrop-filter: blur(15px);
 }

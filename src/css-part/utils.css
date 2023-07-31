@@ -27,3 +27,8 @@
   padding: 0;
   margin: 0;
 }
+
+.backdrop-blur {
+  backdrop-filter: blur(15px);
+}
+

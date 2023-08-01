@@ -30,7 +30,7 @@ html {
   color: hsl(var(--dark-or-light), 0%, 100%);
 }
 body {
-  margin: 0;  
+  margin: 0;
 }
 .ab-layout {
   display: grid;
@@ -39,8 +39,8 @@ body {
   height: 100vh;
 
   & main {
-     background-color: var(--bg-main); 
-    margin:0;
+    /* background-color: var(--bg-main);  */
+    margin: 0;
   }
 }
 .svg-bg-container {
@@ -52,8 +52,13 @@ body {
   z-index: -1;
   overflow: hidden;
 
-
-
+  &.overlay::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--bg-main);
+  }
 }
 .svg-set-fills {
   display: block;
@@ -102,27 +107,27 @@ header.top {
 .top-nav>li>a {
     text-decoration: none;
     padding: 1.5rem;
-    
-    }
+
+}
 .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        font-family: system-ui;
-    
-        .sub-title {
-            font-size: 0.75rem;
-            font-weight: normal;
-        }
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: system-ui;
+
+    .sub-title {
+        font-size: 0.75rem;
+        font-weight: normal;
     }
+}
 .logo-svg_fill1 {
-        fill: var(--clr-01);
-    }
+    fill: var(--clr-01);
+}
 .logo-svg_fill2 {
-        fill: var(--clr-02);
-    }
+    fill: var(--clr-02);
+}
 .logo-svg_stroke1 {
-        stroke: var(--clr-01);
-    }
+    stroke: var(--clr-01);
+}
 .logo-svg_stroke2 {
     stroke: var(--clr-02);
 }

@@ -1,11 +1,12 @@
 :root {
+  --theme: 'light';
   --color-primary: #007bff;
   --color-secondary: #6c757d;
   --color-success: #28a745;
   --dark-or-light: 0;
-    --bg-main: hsl(0deg 0% 0% / 50%);
-    --bg-header: hsl(0deg 0% 0% / 34%);
-    --bg-footer: hsl(0deg 0% 0% / 34%);
+  --bg-main: hsl(0deg 0% 0% / 50%);
+  --bg-header: hsl(0deg 0% 0% / 34%);
+  --bg-footer: hsl(0deg 0% 0% / 34%);
   --svg-gradient-base: 278deg;
   --svg-cl01: oklch((var(--svg-gradient-base)), 100%, 66%);
   --svg-cl02: oklch(calc((var(--svg-gradient-base) + 20)), 100%, 66%);
@@ -18,7 +19,8 @@
   --svg-cl09: oklch((var(--svg-gradient-base) + 160), 100%, 66%);
   --svg-cl10: oklch((var(--svg-gradient-base) + 180), 100%, 66%);
   --clr-01: #d439f5;
-    --clr-02: #f5c048;
+  --clr-02: #f5c048;
+
 }
 
 .svg-set-fills {

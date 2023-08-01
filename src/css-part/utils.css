@@ -63,3 +63,6 @@
 .backdrop-blur {
   backdrop-filter: blur(15px);
 }
+.pointer {
+  cursor: pointer;
+}

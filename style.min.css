@@ -1,12 +1,13 @@
 /* basic root vars reset and layout */
 :root {
+  --theme: 'light';
   --color-primary: #007bff;
   --color-secondary: #6c757d;
   --color-success: #28a745;
   --dark-or-light: 0;
-    --bg-main: hsl(0deg 0% 0% / 50%);
-    --bg-header: hsl(0deg 0% 0% / 34%);
-    --bg-footer: hsl(0deg 0% 0% / 34%);
+  --bg-main: hsl(0deg 0% 0% / 50%);
+  --bg-header: hsl(0deg 0% 0% / 34%);
+  --bg-footer: hsl(0deg 0% 0% / 34%);
   --svg-gradient-base: 278deg;
   --svg-cl01: oklch((var(--svg-gradient-base)), 100%, 66%);
   --svg-cl02: oklch(calc((var(--svg-gradient-base) + 20)), 100%, 66%);
@@ -19,7 +20,8 @@
   --svg-cl09: oklch((var(--svg-gradient-base) + 160), 100%, 66%);
   --svg-cl10: oklch((var(--svg-gradient-base) + 180), 100%, 66%);
   --clr-01: #d439f5;
-    --clr-02: #f5c048;
+  --clr-02: #f5c048;
+
 }
 .svg-set-fills {
   margin: unset;
@@ -45,14 +47,11 @@ body {
 }
 .svg-bg-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: -1;
   overflow: hidden;
 
-  &.overlay::after {
+  &.bg-viewport-overlay::after {
     content: '';
     inset: 0;
     position: absolute;
@@ -131,6 +130,47 @@ header.top {
 .logo-svg_stroke2 {
     stroke: var(--clr-02);
 }
+/* theme switcher */
+.theme-switcher {
+    &:focus-visible {
+        outline: 2px solid #fff;
+    }
+
+    & label {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+    }
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+#theme-switcher:checked+label {
+    --theme: 'dark';
+
+    & :first-child {
+        fill: red;
+        display: inline-block
+    }
+
+    & :last-child {
+        display: none;
+    }
+}
+#theme-switcher:not(:checked)+label {
+    --theme: 'light';
+
+    & :first-child {
+        display: none;
+    }
+
+    & :last-child {
+        display: inline-block;
+        fill: green;
+    }
+}
 footer.bottom {
     background-color: var(--bg-footer);
     padding: 2rem 0.5rem;
@@ -194,4 +234,7 @@ footer.bottom {
 }
 .backdrop-blur {
   backdrop-filter: blur(15px);
+}
+.pointer {
+  cursor: pointer;
 }

@@ -22,14 +22,11 @@ body {
 
 .svg-bg-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: -1;
   overflow: hidden;
 
-  &.overlay::after {
+  &.bg-viewport-overlay::after {
     content: '';
     inset: 0;
     position: absolute;

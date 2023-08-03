@@ -1,6 +1,6 @@
 'use strict';
 //select svg element
-const svgElem = document.querySelector('.svg-set-fills');
+const svgElem = document.querySelector('.svg-bg-colors');
 
 //set css variable for svg element to be the largest of the two dimensions
 const setPropForSvg = () =>
@@ -8,7 +8,5 @@ const setPropForSvg = () =>
         ? svgElem.style.setProperty('--width-or-height-largest', window.innerWidth + 'px')
         : svgElem.style.setProperty('--width-or-height-largest', window.innerHeight * 2 + 'px');
 
-setPropForSvg()
-
-svgElem.addEventListener('resize', () => setPropForSvg());
-
+window.addEventListener('resize', setPropForSvg);
+setPropForSvg();

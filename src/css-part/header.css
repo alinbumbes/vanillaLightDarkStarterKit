@@ -3,13 +3,14 @@ header.top {
     background-color: var(--bg-footer);
     align-items: center;
     padding: 0 .5rem;
-    color: #fff;
+    color: var(--color-header);
 }
 
 .top-nav>li>a {
     text-decoration: none;
     padding: 1.5rem;
-
+    font-size: 1.1rem;
+    color: var(--color-body);
 }
 
 .logo {
@@ -42,49 +43,4 @@ header.top {
 
 .logo-svg_stroke2 {
     stroke: var(--clr-02);
-}
-/* theme switcher */
-
-.theme-switcher {
-    &:focus-visible {
-        outline: 2px solid #fff;
-    }
-
-    & label {
-        width: 1.5rem;
-        height: 1.5rem;
-        display: block;
-    }
-
-    & svg {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-#theme-switcher:checked+label {
-    --theme: 'dark';
-
-    & :first-child {
-        fill: red;
-        display: inline-block
-    }
-
-    & :last-child {
-        display: none;
-    }
-}
-
-
-#theme-switcher:not(:checked)+label {
-    --theme: 'light';
-
-    & :first-child {
-        display: none;
-    }
-
-    & :last-child {
-        display: inline-block;
-        fill: green;
-    }
 }

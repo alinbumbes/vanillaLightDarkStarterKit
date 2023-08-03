@@ -13,7 +13,7 @@
   <main>
     <!-- make a svg background fill the entire viewport as fixed element with js window.width, window.height auto-margins to center it -->
     <div class="svg-bg-container bg-viewport-overlay">
-      <svg class="svg-set-fills" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1600 800">
+      <svg class="svg-bg-colors" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1600 800">
         <rect fill="#D648FF" width="1600" height="800" />
         <g>
           <path
@@ -46,43 +46,45 @@
             <path class="logo-svg_fill1 logo-svg_stroke1"
               d="M36.3538 8.49136L35.4877 8.49136L35.9208 9.24136L52.8553 38.5728L53.2883 39.3228L53.7213 38.5728L70.6559 9.24136L71.0889 8.49136L70.2228 8.49136L36.3538 8.49136Z"
               fill="#F5B539" stroke="#F5B539" />
-            
+
             <circle class="logo-svg_fill2 logo-svg_stroke2" cx="53.2883" cy="18.7685" r="9.27716"
               transform="rotate(-60 53.2883 18.7685)" fill="#F54848" stroke="#F5B539" />
-            
+
             <path class="logo-svg_fill2 logo-svg_stroke2"
               d="M27.9873 9.64136L27.5543 8.89136L27.1213 9.64136L10.1868 38.9728L9.75376 39.7228H10.6198H44.4889H45.3549L44.9219 38.9728L27.9873 9.64136Z"
               fill="#F54848" stroke="#F54848" />
-            
+
             <path class="logo-svg_fill2 logo-svg_stroke2"
               d="M79.0543 9.9V8.03397L78.1213 9.65L61.1868 38.9815L60.7538 39.7315H61.6198H78.5543H79.0543V39.2315V9.9Z"
               fill="#F54848" stroke="#F54848" />
 
-            <circle class="logo-svg_fill1 logo-svg_stroke1" cx="27.5543" cy="29.4457" r="9.27716" fill="#F5B539" stroke="#F54848" />
+            <circle class="logo-svg_fill1 logo-svg_stroke1" cx="27.5543" cy="29.4457" r="9.27716" fill="#F5B539"
+              stroke="#F54848" />
 
-            <circle class="logo-svg_fill1 logo-svg_stroke2" cx="78.7772" cy="28.7772" r="9.27716" fill="#F5B539" stroke="#F54848" />
-            </g>
-            <defs>
-              <clipPath id="clip0_1_2">
-                <rect width="96" height="48" fill="white" />
-              </clipPath>
-            </defs>
-            </svg>
-            <div class="d-flex flex-col">
-              <span class="no-wrap">Slowbose</span>
-              <span class="no-wrap sub-title">.dev .work .inc</span>
-            </div>
-            </div>
-            <ul class="top-nav d-flex justify-content-end ul-reset w-100">
-              <li><a class="d-flex" href="#">home</a></li>
-              <li><a class="d-flex" href="#">stuff</a></li>
-              <li><a class="d-flex" href="#">about</a></li>
-            </ul>
+            <circle class="logo-svg_fill1 logo-svg_stroke2" cx="78.7772" cy="28.7772" r="9.27716" fill="#F5B539"
+              stroke="#F54848" />
+          </g>
+          <defs>
+            <clipPath id="clip0_1_2">
+              <rect width="96" height="48" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <div class="d-flex flex-col">
+          <span class="no-wrap">Slowbose</span>
+          <span class="no-wrap sub-title">.dev .work .inc</span>
+        </div>
+      </div>
+      <ul class="top-nav d-flex justify-content-end ul-reset w-100">
+        <li><a class="d-flex" href="#">home</a></li>
+        <li><a class="d-flex" href="#">stuff</a></li>
+        <li><a class="d-flex" href="#">about</a></li>
+      </ul>
       <div class="theme-switcher">
-      
+
         <input type="checkbox" id="theme-switcher" hidden>
         <label class="pointer" for="theme-switcher">
-      
+
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars"
             viewBox="0 0 16 16">
             <path
@@ -90,17 +92,17 @@
             <path
               d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
           </svg>
-      
+
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun"
             viewBox="0 0 16 16">
             <path
               d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
           </svg>
-      
+
         </label>
       </div>
-      </header>
-      <h1 class="h1 txt-primary">Hello and welcome</h1>
+    </header>
+    <h1 class="h1 txt-primary">Hello and welcome</h1>
     <p class="fs-lg">
       In this project I aim to achieve a simple css only solution for dark/light theme switcher, among other things
     </p>
@@ -111,7 +113,7 @@
         create navbar at top, make it look nice regardless of light/dark theme. add links to the top, to be
         continued...
       </p>
-      </div>
+    </div>
 
     <div class="card">
       <h2>create light/dark theme switcher with local storage recall of preferrences and prefers system theme</h2>
@@ -121,7 +123,7 @@
         css-variables based on that state. also save that value to localStorage, recall it on page load, and check if
         the system prefers dark theme, if so, set the theme to dark. to be continued...
       </p>
-      </div>
+    </div>
 
     <div class="card">
       <h2>move entire project to the slowbose project, so it deploys with netlify on slowbose.netlify.app</h2>
@@ -129,9 +131,9 @@
         also while you're there, create a contact form, add the fucking https://docs.netlify.com/forms/setup/ option
         in netlify so that form autodetection and submission happens automatically, yeah, test that shit out
       </p>
-      </div>
-      </main>
-      <footer class="bottom d-flex flex-space-between">footer data</footer>
+    </div>
+  </main>
+  <footer class="bottom d-flex flex-space-between">footer data</footer>
 </body>
 
 </html>

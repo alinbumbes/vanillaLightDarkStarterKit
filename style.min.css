@@ -1,38 +1,37 @@
 /* basic root vars reset and layout */
 :root {
+  /* light theme */
   --theme: 'light';
+  --color-body: #000;
+  --dark0-or-light100: 100%;
+  --bg-main: hsl(none 0% 100% / 33%);
+  --color-header: var(--color-body);
+  --bg-header: hsl(0deg 0% var(--dark0-or-light100) / 33%);
+  --color-footer: var(--color-body);
+  --bg-footer: var(--bg-header);
+  --bg-color-overlay: hsl(0 0% var(--dark0-or-light100) / 33%);
+  --svg-gradient-base: 278deg;
+  --svg-lightness: 33%;
+
+  --bg-card: hsl(0deg 0% var(--dark0-or-light100) / 10%);
   --color-primary: #007bff;
   --color-secondary: #6c757d;
   --color-success: #28a745;
-  --dark-or-light: 0;
-  --bg-main: hsl(0deg 0% 0% / 50%);
-  --bg-header: hsl(0deg 0% 0% / 34%);
-  --bg-footer: hsl(0deg 0% 0% / 34%);
-  --svg-gradient-base: 278deg;
-  --svg-cl01: oklch((var(--svg-gradient-base)), 100%, 66%);
-  --svg-cl02: oklch(calc((var(--svg-gradient-base) + 20)), 100%, 66%);
-  --svg-cl03: oklch((var(--svg-gradient-base) + 40), 100%, 66%);
-  --svg-cl04: oklch((var(--svg-gradient-base) + 60), 100%, 66%);
-  --svg-cl05: oklch((var(--svg-gradient-base) + 80), 100%, 66%);
-  --svg-cl06: oklch((var(--svg-gradient-base) + 100), 100%, 66%);
-  --svg-cl07: oklch((var(--svg-gradient-base) + 120), 100%, 66%);
-  --svg-cl08: oklch((var(--svg-gradient-base) + 140), 100%, 66%);
-  --svg-cl09: oklch((var(--svg-gradient-base) + 160), 100%, 66%);
-  --svg-cl10: oklch((var(--svg-gradient-base) + 180), 100%, 66%);
+
   --clr-01: #d439f5;
   --clr-02: #f5c048;
 
-}
-.svg-set-fills {
-  margin: unset;
 }
 html {
   margin: 0;
   display: flow-root;
   color: hsl(var(--dark-or-light), 0%, 100%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
 }
 body {
   margin: 0;
+  color: var(--color-body)
 }
 .ab-layout {
   display: grid;
@@ -56,44 +55,89 @@ body {
     inset: 0;
     position: absolute;
     z-index: 1;
-    background-color: var(--bg-main);
+    background-color: var(--bg-color-overlay);
   }
 }
-.svg-set-fills {
+.svg-bg-colors {
   display: block;
   margin: 0 auto;
   width: var(--width-or-height-largest);
   height: calc(var(--width-or-height-largest) / 2);
 }
-.svg-set-fills path:nth-child(1) {
-  fill: hsl(calc(var(--svg-gradient-base) - 40deg), 100%, 66%);
+.svg-bg-colors path:nth-child(1) {
+  fill: hsl(calc(var(--svg-gradient-base) - 40deg), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(2) {
-  fill: hsl(calc(var(--svg-gradient-base) - 30deg), 100%, 66%);
+.svg-bg-colors path:nth-child(2) {
+  fill: hsl(calc(var(--svg-gradient-base) - 30deg), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(3) {
-  fill: hsl(calc(var(--svg-gradient-base) - 20deg), 100%, 66%);
+.svg-bg-colors path:nth-child(3) {
+  fill: hsl(calc(var(--svg-gradient-base) - 20deg), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(4) {
-  fill: hsl(calc(var(--svg-gradient-base) - 10deg), 100%, 66%);
+.svg-bg-colors path:nth-child(4) {
+  fill: hsl(calc(var(--svg-gradient-base) - 10deg), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(5) {
-  fill: hsl(var(--svg-gradient-base), 100%, 66%);
+.svg-bg-colors path:nth-child(5) {
+  fill: hsl(var(--svg-gradient-base), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(6) {
-  fill: hsl(calc(var(--svg-gradient-base) + 10deg), 100%, 66%);
+.svg-bg-colors path:nth-child(6) {
+  fill: hsl(calc(var(--svg-gradient-base) + 10deg), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(7) {
-  fill: hsl(calc(var(--svg-gradient-base) + 20deg), 100%, 66%);
+.svg-bg-colors path:nth-child(7) {
+  fill: hsl(calc(var(--svg-gradient-base) + 20deg), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(8) {
-  fill: hsl(calc(var(--svg-gradient-base) + 30deg), 100%, 66%);
+.svg-bg-colors path:nth-child(8) {
+  fill: hsl(calc(var(--svg-gradient-base) + 30deg), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(9) {
-  fill: hsl(calc(var(--svg-gradient-base) + 40deg), 100%, 66%);
+.svg-bg-colors path:nth-child(9) {
+  fill: hsl(calc(var(--svg-gradient-base) + 40deg), 100%, var(--svg-lightness));
 }
-.svg-set-fills path:nth-child(10) {
-  fill: hsl(calc(var(--svg-gradient-base) + 50deg), 100%, 66%);
+.svg-bg-colors path:nth-child(10) {
+  fill: hsl(calc(var(--svg-gradient-base) + 50deg), 100%, var(--svg-lightness));
+}
+/* theme switcher */
+:root:has(#theme-switcher:checked) {
+    /* dark theme */
+    --theme: 'dark';
+    --color-body: #fff;
+    --dark0-or-light100: 0%;
+    --svg-lightness: 50%;
+}
+.theme-switcher {
+    &:focus-visible {
+        outline: 2px solid #fff;
+    }
+
+    & label {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+    }
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+/* theme switcher from the header */
+#theme-switcher:checked+label {
+    & :first-child {
+        fill: red;
+        display: inline-block
+    }
+
+    & :last-child {
+        display: none;
+    }
+}
+#theme-switcher:not(:checked)+label {
+    & :first-child {
+        display: none;
+    }
+
+    & :last-child {
+        display: inline-block;
+        fill: green;
+    }
 }
 /* components */
 header.top {
@@ -101,12 +145,13 @@ header.top {
     background-color: var(--bg-footer);
     align-items: center;
     padding: 0 .5rem;
-    color: #fff;
+    color: var(--color-header);
 }
 .top-nav>li>a {
     text-decoration: none;
     padding: 1.5rem;
-
+    font-size: 1.1rem;
+    color: var(--color-body);
 }
 .logo {
     font-size: 1.5rem;
@@ -130,58 +175,17 @@ header.top {
 .logo-svg_stroke2 {
     stroke: var(--clr-02);
 }
-/* theme switcher */
-.theme-switcher {
-    &:focus-visible {
-        outline: 2px solid #fff;
-    }
-
-    & label {
-        width: 1.5rem;
-        height: 1.5rem;
-        display: block;
-    }
-
-    & svg {
-        width: 100%;
-        height: 100%;
-    }
-}
-#theme-switcher:checked+label {
-    --theme: 'dark';
-
-    & :first-child {
-        fill: red;
-        display: inline-block
-    }
-
-    & :last-child {
-        display: none;
-    }
-}
-#theme-switcher:not(:checked)+label {
-    --theme: 'light';
-
-    & :first-child {
-        display: none;
-    }
-
-    & :last-child {
-        display: inline-block;
-        fill: green;
-    }
-}
 footer.bottom {
-    background-color: var(--bg-footer);
-    padding: 2rem 0.5rem;
-    color: #fff;
-  }
+  background-color: var(--bg-footer);
+  padding: 2rem 0.5rem;
+  color: var(--color-footer);
+}
 .card {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 4px #00000059;
-    background-color: hsl(0deg 0% 0% / 16%);
+    background-color: var(--bg-card);
     backdrop-filter: blur(15px);
 }
 /* utilities */
